@@ -9,36 +9,39 @@ class Login extends GetView<LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Center(
-            child: Text(
-                "Login",
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold,color: Colors.blue),
-            ),
-          ),
-          Padding(padding: EdgeInsets.only(top: 30)),
-
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.all(16),
-                primary: Colors.blueAccent,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25)
-                )
-              ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Center(
               child: Text(
-                "Entrar",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20
-                ),
+                  "Login",
+                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold,color: Colors.blue),
               ),
-              onPressed: () => controller.irParaDashboard()
-          )
-        ],
+            ),
+            Padding(padding: EdgeInsets.only(top: 30)),
+
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.fromLTRB(30,16, 30, 16),
+                    backgroundColor: Colors.blueAccent,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)
+                  )
+                ),
+                child: Text(
+                  "Entrar",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20
+                  ),
+                ),
+                onPressed: () => controller.irParaDashboard()
+            )
+          ],
+        ),
       ),
     );
   }

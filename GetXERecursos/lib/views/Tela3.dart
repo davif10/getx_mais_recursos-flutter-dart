@@ -18,7 +18,7 @@ class Tela3 extends GetView<Tela3Controller> {
           )
         ],
       ),
-      body:PdfViewPinch(controller: controller.pdfPinchController)
+      body: PdfViewPinch(controller: controller.pdfPinchController)
     );
   }
 }
